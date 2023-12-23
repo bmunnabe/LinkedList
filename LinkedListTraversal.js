@@ -20,14 +20,12 @@ function printTraversal(head) {
         head = head.next;
     }
 }
-
 printList(A);
 
-
+// Recursive way
 function printRecursiveWay(head){
     if(head===null) return;
     console.log(head.value);
     printRecursiveWay(head.next);
 }
-
 printRecursiveWay(A);
