@@ -29,3 +29,30 @@ function printRecursiveWay(head){
     printRecursiveWay(head.next);
 }
 printRecursiveWay(A);
+
+
+
+// To get as ARRAY Instead PRINTING 
+function printTraversal(head) {
+    var output = [];
+    while(head!==null) {
+        output.push(head.value);
+        head = head.next;
+    }
+    return output;
+}
+printTraversal(A);
+
+
+// To get as ARRAY Instead PRINTING via recursive
+function fillArray(head, values){
+    if(head===null) return;
+    values.push(head.value);
+    fillArray(head.next, values);
+}
+function getViaRecursive(head){
+    const array = []
+    fillArray(head, array);
+    return array;
+}
+getViaRecursive(A)
